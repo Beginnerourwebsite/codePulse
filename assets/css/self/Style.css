@@ -1,0 +1,62 @@
+@import url("../custom.css");
+@import url("../bootstrap.css");
+@import url("../neon-core.css");
+@import url("../neon-theme.css");
+@import url("../neon-forms.css");
+@import url("../font-icons/entypo/css/entypo.css");
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic");
+@import url("../../js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css");
+/* map css start */
+@import url("../../js/self/web/leaflet.css");
+
+/* map css end */
+.CountryList:hover {
+    background-color: #5e6470;
+    cursor: pointer;
+}
+
+
+/* file upload start */
+#fileUpload {
+    height: 80vh;
+    margin: 6vh;
+    border: 5px dashed rgb(198, 193, 193);
+    border-radius: 20px;
+}
+
+.Hovertimeiconmove {
+    cursor: pointer;
+}
+
+.Hovertimeiconmove:hover svg {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.Hovertimeiconmove p:nth-child(3):hover {
+    color: rgb(168, 136, 136);
+}
+
+
+
+/* file upload end */
+/* task code start */
+.todo-list li{
+    width: 100%;
+}
+.todo-list li:hover{
+background-color:#5e6470;
+
+}
+/* task code end */
+
+
+.scrollHide::-webkit-scrollbar {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .pointer{
+    cursor: pointer;
+  }

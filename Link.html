@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+    <link rel="icon" href="https://demo.neontheme.com/assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/self/Style.css">
+
+    <script src="./assets/js/self/fontawasom.js"></script>
+    <!-- <script src='https://kit.fontawesome.com/3057d38654.js' crossorigin='anonymous'></script> -->
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="page-body page-fade">
+    <div class="page-container">
+        <div class="sidebar-menu">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <div class="logo"> <a href="index.html"> <img src="./assets/images/Add a subheading2.png"
+                                width="150px" alt />
+                        </a> </div>
+                    <div class="sidebar-collapse"> <a href="#" class="sidebar-collapse-icon"><i
+                                class="fa-solid fa-bars p-2 px-3  "></i> </a> </div>
+                    <div class="sidebar-mobile-menu visible-xs"> <a href="#" class="with-animation"> <i
+                                class="fa-solid fa-bars"></i> </a> </div>
+                </header>
+                <ul id="main-menu" class="main-menu position-sticky top-0 ">
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="alerts">
+
+            </div>
+            <div class="d-flex justify-content-center align-items-center"
+                style="height: 90vh;min-height: fit-content;margin-top: 50px;">
+                <div class="p-4 shadow  border rounded-4   "
+                    style="width: 500px;height: fit-content; overflow: auto;max-width: 620px;">
+                    <div class="display-1 mb-5 ">Link</div>
+                    <form action="">
+                        <input type="text" class="form-control  mb-3" oninput="getvalue(this)"
+                            style="height: 50px;font-size: medium;" placeholder="Title" name="" id="name">
+                        <textarea type="text" class="form-control mb-3 " oninput="getvalue(this)"
+                            style="height: 60px;font-size: large;" placeholder="Url" name="" id="Url"></textarea>
+                        <textarea type="text" class="form-control mb-3 " oninput="getvalue(this)"
+                            style="height: 70px;font-size: large;" placeholder="Discription" name=""
+                            id="Discription"></textarea>
+
+                        <button type="reset" class="btn btn-lg btn-primary btn-danger text-capitalize ">reset</button>
+                        <button class="btn btn-lg  btn-success text-capitalize" onclick="nextLink()">submit</button>
+                    </form>
+                    <div style=" max-height:200px;overflow: auto;">
+                        <table class="table mt-5 ">
+                            <thead style="position: sticky;top:0;">
+                                <tr>
+                                    <th style="font-weight: bolder;">Sr. No.</th>
+                                    <th style="font-weight: bolder;">Title</th>
+                                    <th style="font-weight: bolder;">Url</th>
+                                    <th style="font-weight: bolder;">Discription</th>
+                                    <th style="font-weight: bolder;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbdy">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-lg  btn-info text-capitalize float-end  "
+                        onclick="SubmitInFire(this)">submit</button>
+                    <button class="btn btn-lg  btn-secondary text-capitalize ResetAllbtn float-end me-4  "
+                        onclick="Allreset()">reset</button>
+                    <button class="btn btn-lg  btn-danger me-3  text-capitalize float-end  " onclick="deleteSeclected()"
+                        style="display: none;" id="deleteSeclected">Delete selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="./assets/js/jvectormap/jquery-jvectormap-1.2.2.css" id="style-resource-1">
+<link rel="stylesheet" href="./assets/js/rickshaw/rickshaw.min.css" id="style-resource-2">
+<script src="./assets/js/gsap/TweenMax.min.js" id="script-resource-1"></script>
+<script src="./assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js" id="script-resource-2"></script>
+<script src="./assets/js/bootstrap.js" id="script-resource-3"></script>
+<script src="./assets/js/joinable.js" id="script-resource-4"></script>
+<script src="./assets/js/resizeable.js" id="script-resource-5"></script>
+<script src="./assets/js/neon-api.js" id="script-resource-6"></script>
+<script src="./assets/js/cookies.min.js" id="script-resource-7"></script>
+<script src="./assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js" id="script-resource-8"></script>
+<script src="./assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js" id="script-resource-9"></script>
+<script src="./assets/js/jquery.sparkline.min.js" id="script-resource-10"></script>
+<script src="./assets/js/rickshaw/vendor/d3.v3.js" id="script-resource-11"></script>
+<script src="./assets/js/rickshaw/rickshaw.min.js" id="script-resource-12"></script>
+<script src="./assets/js/raphael-min.js" id="script-resource-13"></script>
+<script src="./assets/js/morris.min.js" id="script-resource-14"></script>
+<script src="./assets/js/toastr.js" id="script-resource-15"></script>
+<script src="./assets/js/neon-chat.js" id="script-resource-16"></script>
+<script src="./assets/js/neon-custom.js" id="script-resource-17"></script>
+<script src="./assets/js/neon-demo.js" id="script-resource-18"></script>
+<script src="./assets/js/neon-skins.js" id="script-resource-19"></script>
+<script src="./assets/js/self/Nav.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+<script src="./assets/js/self/firebase.js"></script>
+<script src="./assets/js/self/Alerts.js"></script>
+<script>
+
+    let obj = {}
+    let arr = []
+    function getvalue(self) {
+        obj = { ...obj, [self.id]: self.value, type: "link" ,...timeanddate()}
+    }
+    function nextLink() {
+        event.preventDefault()
+        arr.push(obj)
+        tableCreate()
+
+    }
+    function tableCreate() {
+        document.getElementById("tbdy").innerHTML = ""
+        let table = ""
+        arr.forEach((element, index) => {
+            table = `<tr id="table${index}">
+                                <td><input type="checkbox" onchange="multyDelete(this)"></td>
+                                <td>${element.name}</td>
+                                <td>${element.Url}</td>
+                                <td>${element.Discription}</td>
+                                <td><button class="btn btn-danger disableOnsave" onclick="deletedata('${index}')">delete</button></td>
+                            </tr>`
+            document.getElementById("tbdy").innerHTML += table
+        });
+    }
+    function deletedata(id) {
+        arr.splice(id, 1)
+        tableCreate();
+    }
+    function Allreset() {
+        let trueorfalse = confirm("Are you confirm\n You want to reset All ")
+
+        if (trueorfalse) {
+
+            arr = []
+            tableCreate()
+        }
+    }
+    function SubmitInFire(self) {
+        if (arr.length > 0) {
+            self.innerHTML = "Uploading"
+            self.disabled = true
+            document.querySelector(".ResetAllbtn").disabled = true
+            arr.map(async (element, index) => {
+                let result = await firebaseDatabase("file", element)
+                if (result) {
+                    let allBtndisable = document.getElementById("table" + index)
+                    // console.log(allBtndisable)
+                    allBtndisable.children[0].children[0].disabled = true
+                    allBtndisable.children[4].children[0].disabled = true
+                    alertsshowandhide("success", "All data has been saved successfully.", 2000)
+                    // nh// }
+                    self.removeAttribute("onclick");
+                    self.disabled = false;
+                    self.innerHTML = "Upload new";
+                    self.addEventListener("click", function () {
+                        window.location.reload();
+                        // document.querySelector("input[type=file]").value = "";
+                    })
+
+                }
+
+            })
+        }
+        // alertsshowandhide( "info", "Are you confirm\n You want to submit")
+
+    }
+
+
+    let multydeleteData = [];
+
+    function multyDelete(self) {
+        console.log(self.checked)
+        if (self.checked) {
+            multydeleteData.push(self.parentElement.parentElement.id);
+            console.log(multydeleteData);
+        }
+        else {
+
+            let findDataIndexNum = multydeleteData.findIndex((element) => {
+                return element === self.parentElement.parentElement.id;
+            });
+            multydeleteData.splice(findDataIndexNum, 1)
+            console.log(multydeleteData)
+            // This will log the found element or undefined if not found
+        }
+        let btndeleteSeclected = document.getElementById("deleteSeclected")
+        if (multydeleteData.length > 0) {
+            btndeleteSeclected.style.display = "block";
+        }
+        else {
+            btndeleteSeclected.style.display = "none";
+        }
+    }
+
+    function deleteSeclected() {
+        multydeleteData.sort(function (a, b) { return b - a }).map((element) => {
+            deletedata(element.id)
+            document.getElementById("deleteSeclected").style.display = "none"
+        })
+        multydeleteData = []
+    }
+
+</script>
+
+</html>

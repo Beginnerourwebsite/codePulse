@@ -1,0 +1,39 @@
+[
+    
+    {
+        "label": "dashboard",
+        "url": "./dashboard.html",
+        "icon": "<i class='fa-solid fa-chart-line'></i>",
+        "submenu": false
+    },
+    {
+        "label": "Table",
+        "url": "./index.html",
+        "icon": "<i class='fa-solid fa-table'></i>",
+        "submenu": false
+    },
+    {
+        "label": "File",
+        "url": "./file.html",
+        "icon": "<i class='fa-solid fa-file-export'></i>",
+        "submenu": false
+    },
+    {
+        "label": "Link",
+        "url": "./Link.html",
+        "icon": "<i class='fa-solid fa-link'></i>",
+        "submenu": false
+    },
+    {
+        "label": "Text",
+        "url": "./TextUpload.html",
+        "icon": "<i class='fa-regular fa-file-word'></i>",
+        "submenu": false
+    }
+   
+  
+   
+]
+
+
+

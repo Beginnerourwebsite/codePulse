@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from demo.neontheme.com/dashboard/main/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Mar 2024 04:19:28 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Neon Admin Panel" />
+    <meta name="author" content="Laborator.co" />
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+    <link rel="icon" href="./assets/images/Add a subheading2.png">
+    <link rel="stylesheet" href="./assets/css/self/Style.css">
+
+    <script src='https://kit.fontawesome.com/3057d38654.js' crossorigin='anonymous'></script>
+
+    <style>
+        #tableParent table {
+            background-color: aliceblue;
+        }
+
+        #tableParent::-webkit-scrollbar {
+            width: 100%;
+        }
+
+        #tableParent thead {
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+
+    <title>Neon | Dashboard</title>
+
+
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+    <!--[if lt IE 9]><script src="https://demo.neontheme.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+</head>
+
+<body class="page-body page-fade">
+    <div class="page-container">
+        <div class="sidebar-menu">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <div class="logo"> <a href="index.html"> <img src="./assets/images/Add a subheading2.png"
+                                width="150px" alt />
+                        </a> </div>
+                    <div class="sidebar-collapse"> <a href="#" class="sidebar-collapse-icon"><i
+                                class="fa-solid fa-bars p-2 px-3  "></i> </a> </div>
+                    <div class="sidebar-mobile-menu visible-xs"> <a href="#" class="with-animation"> <i
+                                class="fa-solid fa-bars"></i> </a> </div>
+                </header>
+                <ul id="main-menu" class="main-menu">
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="alerts" style="display: block;"></div>
+            <div class="d-flex justify-content-between mb-5  rounded  p-5 "
+                style="box-shadow: 0px 0px 5px rgb(228, 228, 228);">
+                <div class="w-25">
+
+                    <input type="text" name="" id="search" placeholder="Find with Type" oninput="filterandfind(this)"
+                        class="form-control text-uppercase ">
+                </div>
+                <div class="w-25 d-flex">
+                    <a href="./Link.html" class="me-2"> <button class="btn btn-lg   btn-secondary  w-100">Upload
+                            Link</button></a>
+                    <a href="./file.html"> <button class="btn btn-lg  btn-info w-100">Upload File</button></a>
+                </div>
+            </div>
+
+            <div id="tableParent" style="max-height: 530px;overflow: auto;">
+                <table class="table text-capitalize table-bordered text-center"
+                    style="box-shadow: 0px 0px 5px  rgb(228, 228, 228);">
+                    <thead class="">
+                        <tr>
+                            <th class="text-center ">Sr no.</th>
+                            <th class="text-center ">Date</th>
+                            <th class="text-center ">Name</th>
+                            <th class="text-center ">type</th>
+                            <th class="text-center ">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbdy">
+                    </tbody>
+                </table>
+            </div>
+            <div id="findingimage" style="display: none;">
+                <center><img src="./assets/developer-dribbble.gif" width="400px" alt=""></center>
+                <p style="font-size: xx-large;text-align: center;"></p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+    <script src="./assets/js/self/firebase.js"></script>
+    <link rel="stylesheet" href="./assets/js/jvectormap/jquery-jvectormap-1.2.2.css" id="style-resource-1">
+    <link rel="stylesheet" href="./assets/js/rickshaw/rickshaw.min.css" id="style-resource-2">
+    <script src="./assets/js/gsap/TweenMax.min.js" id="script-resource-1"></script>
+    <script src="./assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js" id="script-resource-2"></script>
+    <script src="./assets/js/bootstrap.js" id="script-resource-3"></script>
+    <script src="./assets/js/joinable.js" id="script-resource-4"></script>
+    <script src="./assets/js/resizeable.js" id="script-resource-5"></script>
+    <script src="./assets/js/neon-api.js" id="script-resource-6"></script>
+    <script src="./assets/js/cookies.min.js" id="script-resource-7"></script>
+    <script src="./assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js" id="script-resource-8"></script>
+    <script src="./assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js" id="script-resource-9"></script>
+    <script src="./assets/js/jquery.sparkline.min.js" id="script-resource-10"></script>
+    <script src="./assets/js/rickshaw/vendor/d3.v3.js" id="script-resource-11"></script>
+    <script src="./assets/js/rickshaw/rickshaw.min.js" id="script-resource-12"></script>
+    <script src="./assets/js/raphael-min.js" id="script-resource-13"></script>
+    <script src="./assets/js/morris.min.js" id="script-resource-14"></script>
+    <script src="./assets/js/toastr.js" id="script-resource-15"></script>
+    <script src="./assets/js/neon-chat.js" id="script-resource-16"></script>
+    <script src="./assets/js/neon-custom.js" id="script-resource-17"></script>
+    <script src="./assets/js/neon-demo.js" id="script-resource-18"></script>
+    <script src="./assets/js/neon-skins.js" id="script-resource-19"></script>
+    <script src="./assets/js/self/Nav.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+    <script src="./assets/js/self/firebase.js"></script>
+    <script src="./assets/js/self/Alerts.js"></script>
+
+    <script type="text/javascript">
+        function tableCreate(dataArr) {
+            document.getElementById("tbdy").innerHTML = ""
+            let table = ""
+            dataArr.map((element, index) => {
+                console.log(element)
+                if (element.type == "link") {
+                    table += `<tr>
+                        <td>${index + 1}</td>
+                        <td>${element.date}<br>
+                            ${element.time}</td>
+                        <td>${element.name}</td>
+                        <td>${element.type}</td>
+                        <td>
+                            <a href=${element.Url} target="-"><button class="btn btn-info w-50 ">Visit</button></a>
+                        </td>
+                    </tr>`
+                }
+                else
+                    table += `<tr>
+                        <td>${index + 1}</td>
+                        <td>${element.date}<br>
+                            ${element.time}</td>
+                        <td>${element.name}</td>
+                        <td>${element.type}</td>
+                        <td>
+                            <a href=${element.url} target="_blank"><button class="btn btn-info">View</button></a>
+                            <a href="${element.url}" download="${element.name}"> <button class="btn btn-success ">Download</button></a>
+                        </td>
+                    </tr>`
+            })
+            document.getElementById("tbdy").innerHTML += table
+        }
+        let resultArr = []
+        function filterandfind(self) {
+
+            const patternString = self.value; // or any other dynamic pattern as a string
+            const pattern = new RegExp(patternString);
+            let data = resultArr.filter(x => pattern.test(x.type.toLowerCase()))
+
+            tableCreate(data)
+        }
+        let findingimage = document.getElementById("findingimage")
+        // filterandfind()
+
+        window.addEventListener('online', getData);
+        window.addEventListener('offline', getData);
+        async function getData() {
+            if (navigator.onLine) {
+               
+                internetOrother("show", "success", "connected successfully")
+
+
+                findingimage.children[0].children[0].src = "./assets/developer-dribbble.gif"
+                findingimage.style.display = "block"
+                let result = []
+                setTimeout(function () {
+                    internetOrother("hide")
+                }, 2000)
+
+                firebaseDatabase("file", "").then(result => {
+                    resultArr = result
+
+                    findingimage.style.display = "none"
+
+                    internetOrother("hide")
+                    tableCreate(resultArr.reverse())
+
+                }).catch(error => {
+
+                    findingimage.children[0].children[0].src = "./assets/notfound.svg"
+                    findingimage.children[1].innerHTML = "Data Not Found"
+
+                })
+
+            }
+            else {
+                internetOrother()
+                if (document.getElementById("tbdy").children.length == 0) {
+
+                    findingimage.children[0].children[0].src = "./assets/Recording2024-05-08224826-ezgif.com-crop.gif"
+                    findingimage.style.display = "block"
+                }
+
+            }
+            // document.getElementById("search").addEventListener("keyup", filterandfind(result))
+        }
+        getData()
+    </script>
+
+
+
+
+
+
+
+
+    <script></script>
+</body>
+<!-- Mirrored from demo.neontheme.com/dashboard/main/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Mar 2024 04:19:45 GMT -->
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/self/Style.css">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+    <link rel="icon" href="./assets/images/Add a subheading2.png">
+    <link rel="stylesheet" href="./assets/css/self/Style.css">
+
+    <script src='https://kit.fontawesome.com/3057d38654.js' crossorigin='anonymous'></script>
+
+
+    <title>Neon | Dashboard</title>
+
+
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="page-body page-fade">
+    <div class="page-container">
+        <div class="sidebar-menu">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <div class="logo"> <a href="index.html"> <img src="./assets/images/Add a subheading2.png"
+                                width="150px" alt />
+                        </a> </div>
+                    <div class="sidebar-collapse"> <a href="#" class="sidebar-collapse-icon"><i
+                                class="fa-solid fa-bars p-2 px-3  "></i> </a> </div>
+                    <div class="sidebar-mobile-menu visible-xs"> <a href="#" class="with-animation"> <i
+                                class="fa-solid fa-bars"></i> </a> </div>
+                </header>
+                <ul id="main-menu" class="main-menu">
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- <div class="alert alert-danger position-fixed w-50  "  id="alertDanger" style="font-size: medium;right: 20px;display: none;" role="alert">
+                This is a danger alert—check it out!
+                <span style="position: absolute; right: 10px;cursor: pointer;" onclick="this.parentElement.style.display='none'"><i class="fa-solid fa-xmark"></i></span>
+            </div> -->
+            <div id="alerts" style="display: none;"></div>
+            <div class="">
+                <div id="fileUpload" onclick="fileUpload()" ondragover="dragOverHandler(event)"
+                    ondrop="dropHandler(event)">
+                    <div class="d-flex justify-content-center align-items-center h-100 Hovertimeiconmove ">
+                        <div class="d-flex flex-column align-items-center ">
+                            <svg width="20vw" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M736.68 435.86a173.773 173.773 0 0 1 172.042 172.038c0.578 44.907-18.093 87.822-48.461 119.698-32.761 34.387-76.991 51.744-123.581 52.343-68.202 0.876-68.284 106.718 0 105.841 152.654-1.964 275.918-125.229 277.883-277.883 1.964-152.664-128.188-275.956-277.883-277.879-68.284-0.878-68.202 104.965 0 105.842zM285.262 779.307A173.773 173.773 0 0 1 113.22 607.266c-0.577-44.909 18.09-87.823 48.461-119.705 32.759-34.386 76.988-51.737 123.58-52.337 68.2-0.877 68.284-106.721 0-105.842C132.605 331.344 9.341 454.607 7.379 607.266 5.417 759.929 135.565 883.225 285.262 885.148c68.284 0.876 68.2-104.965 0-105.841z"
+                                    fill="#4A5699" />
+                                <path
+                                    d="M339.68 384.204a173.762 173.762 0 0 1 172.037-172.038c44.908-0.577 87.822 18.092 119.698 48.462 34.388 32.759 51.743 76.985 52.343 123.576 0.877 68.199 106.72 68.284 105.843 0-1.964-152.653-125.231-275.917-277.884-277.879-152.664-1.962-275.954 128.182-277.878 277.879-0.88 68.284 104.964 68.199 105.841 0z"
+                                    fill="#C45FA0" />
+                                <path
+                                    d="M545.039 473.078c16.542 16.542 16.542 43.356 0 59.896l-122.89 122.895c-16.542 16.538-43.357 16.538-59.896 0-16.542-16.546-16.542-43.362 0-59.899l122.892-122.892c16.537-16.542 43.355-16.542 59.894 0z"
+                                    fill="#F39A2B" />
+                                <path
+                                    d="M485.17 473.078c16.537-16.539 43.354-16.539 59.892 0l122.896 122.896c16.538 16.533 16.538 43.354 0 59.896-16.541 16.538-43.361 16.538-59.898 0L485.17 532.979c-16.547-16.543-16.547-43.359 0-59.901z"
+                                    fill="#F39A2B" />
+                                <path
+                                    d="M514.045 634.097c23.972 0 43.402 19.433 43.402 43.399v178.086c0 23.968-19.432 43.398-43.402 43.398-23.964 0-43.396-19.432-43.396-43.398V677.496c0.001-23.968 19.433-43.399 43.396-43.399z"
+                                    fill="#E5594F" />
+                            </svg>
+                            <p class="display-2  ">Drag and Drop</p>
+                            <p class="display-4  " onclick="fileUpload()">File Upload</p>
+                        </div>
+                    </div>
+                </div>
+                <div style=" max-height:200px;overflow: auto;">
+                    <table class="table overflow-auto " style="font-size: larger;">
+                        <thead class="position-sticky top-0 ">
+                            <tr>
+                                <th>#</th>
+                                <th class="w-50 ">Name <span class="text-secondary " title="total file uploaded"
+                                        id="count"></span></th>
+                                <th>Type</th>
+                                <th>size</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+                <button class="btn btn-info btn-lg float-end " onclick="Uploadinfirebase(this)">Upload</button>
+                <button class="btn btn-danger btn-lg float-end me-2 ResetAllbtn"
+                    onclick="window.location.reload()">Reset
+                    All</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+<script src="./assets/js/self/firebase.js"></script>
+<link rel="stylesheet" href="./assets/js/jvectormap/jquery-jvectormap-1.2.2.css" id="style-resource-1">
+<link rel="stylesheet" href="./assets/js/rickshaw/rickshaw.min.css" id="style-resource-2">
+<script src="./assets/js/gsap/TweenMax.min.js" id="script-resource-1"></script>
+<script src="./assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js" id="script-resource-2"></script>
+<script src="./assets/js/bootstrap.js" id="script-resource-3"></script>
+<script src="./assets/js/joinable.js" id="script-resource-4"></script>
+<script src="./assets/js/resizeable.js" id="script-resource-5"></script>
+<script src="./assets/js/neon-api.js" id="script-resource-6"></script>
+<script src="./assets/js/cookies.min.js" id="script-resource-7"></script>
+<script src="./assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js" id="script-resource-8"></script>
+<script src="./assets/js/jvectormap/jquery-jvectormap-europe-merc-en.js" id="script-resource-9"></script>
+<script src="./assets/js/jquery.sparkline.min.js" id="script-resource-10"></script>
+<script src="./assets/js/rickshaw/vendor/d3.v3.js" id="script-resource-11"></script>
+<script src="./assets/js/rickshaw/rickshaw.min.js" id="script-resource-12"></script>
+<script src="./assets/js/raphael-min.js" id="script-resource-13"></script>
+<script src="./assets/js/morris.min.js" id="script-resource-14"></script>
+<script src="./assets/js/toastr.js" id="script-resource-15"></script>
+<script src="./assets/js/neon-chat.js" id="script-resource-16"></script>
+<script src="./assets/js/neon-custom.js" id="script-resource-17"></script>
+<script src="./assets/js/neon-demo.js" id="script-resource-18"></script>
+<script src="./assets/js/neon-skins.js" id="script-resource-19"></script>
+<script src="./assets/js/self/Nav.js"></script>
+<script src="./assets/js/self/Base64.js"></script>
+<script src="./assets/js/self/Alerts.js"></script>
+
+<script>
+    let arr = []
+    function fileUpload() {
+        let Inputbox = document.createElement("input")
+        Inputbox.type = "file"
+        Inputbox.multiple = true
+        Inputbox.click()
+        Inputbox.onchange = function (e) {
+            let file = e.target.files
+            for (let i = 0; i < file.length; i++) {
+
+                (readFileAsBase64(0, file[i])).then(data => {
+                    arr.push(data)
+                    console.log(arr)
+                    tableCreate()
+                })
+            }
+        }
+    }
+
+    //   Drop files here to convert to Base64
+
+    function dragOverHandler(event) {
+        event.preventDefault();
+    }
+
+    function dropHandler(event) {
+        event.preventDefault();
+        var fileList = event.dataTransfer.files;
+        for (var i = 0; i < fileList.length; i++) {
+            readFileAsBase64(0,fileList[i]).then((data => {
+                arr.push(data)
+                tableCreate()
+            }));
+        }
+    }
+
+
+    async function Uploadinfirebase(self) {
+        if (arr.length > 0) {
+            self.innerHTML = "Uploading"
+            self.disabled = true
+            document.querySelector(".ResetAllbtn").disabled = true
+            arr.forEach(async (element, index) => {
+                let saveornot = await firebaseDatabase("file", { ...element, ...timeanddate() })
+                document.getElementById("count").innerHTML = index + 1
+                if (arr.length == index + 1)
+                    if (saveornot) {
+                        self.removeAttribute("onclick");
+
+                        alertsshowandhide("success", "All file Uploaded")
+
+
+                        let allDisableDangerBtn = document.querySelectorAll(".mydeleteBTn")
+                        for (let a = 0; a < allDisableDangerBtn.length; a++) {
+                            allDisableDangerBtn[a].disabled = true
+                        }
+
+                        self.disabled = false;
+                        self.innerHTML = "Upload new";
+                        self.addEventListener("click", function () {
+                            window.location.reload();
+                            // document.querySelector("input[type=file]").value = "";
+                        })
+                    }
+            });
+        }
+        else {
+            alertsshowandhide("danger", "please select file")
+        }
+
+    }
+
+
+    function tableCreate() {
+        let table = ''
+        document.getElementById("table").innerHTML = ""
+        arr.map((element, index) => {
+            let bytes = element.size;
+            let type = element.type || (element.name).split('.').pop();
+
+            table = `
+                    <tr >
+                        <td>${index + 1}</td>
+                        <td>${element.name}</td>
+                        <td>${type}</td>
+                        <td>${bytes}</td>
+                        <td>
+                            <button onclick="Views('${index}')" class="btn btn-info me-3 mydeleteBTn">View</button>
+                            <button onclick="deletedata('${index}')" class="btn btn-danger mydeleteBTn">delete</button>
+                            </td>
+                    </tr>
+                    `
+            document.getElementById("table").innerHTML += table
+        })
+
+    }
+    function Views(id) {
+        let fileUrl = arr[id].url
+        window.open(fileUrl, "_blank")
+    }
+    function deletedata(id) {
+        arr.splice(id, 1)
+        tableCreate()
+    }
+
+</script>
+
+</html>
