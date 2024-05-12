@@ -94,9 +94,9 @@ let logoLink = document.querySelector("link[rel='icon'")
 if (logoLink == null) {
     let createLogoLink = document.createElement("link")
     createLogoLink.rel = "icon"
-    createLogoLink.href = "./assets/images/logo.png"
+    createLogoLink.href = "./assets/images/logo-removebg-preview.png"
 }
 else {
-    logoLink.href = "./assets/images/logo.png"
+    logoLink.href = "./assets/images/logo-removebg-preview.png"
 }
 {/* <link rel="icon" href="./assets/images/logo.png"> */ }
