@@ -29,14 +29,8 @@
         "url": "./TextUpload.html",
         "icon": "<i class='fa-regular fa-file-word'></i>",
         "submenu": false
-    },
-    {
-        "label": "Old File",
-        "url": "./Oldfile.html",
-        "icon": "<i class='fa-solid fa-folder-tree'></i>",
-        "submenu": false
     }
-   
+ 
   
    
 ]
